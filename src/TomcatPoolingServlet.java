@@ -49,7 +49,7 @@ public class TomcatPoolingServlet extends HttpServlet {
 
             // the following commented lines are direct connections without pooling, which is the old way
             // Class.forName("org.gjt.mm.mysql.Driver");
-            // Class.forName("com.mysql.jdbc.Driver").newInstance();
+            // Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             // try (Connection conn = DriverManager.getConnection(loginUrl, loginUser, loginPasswd)) {
 
 
