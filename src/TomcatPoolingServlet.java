@@ -57,31 +57,32 @@ public class TomcatPoolingServlet extends HttpServlet {
             out.println("<BODY><H1>MovieDBExample (with some changes)</H1>");
 
 
-            if (conn == null)
+            if (conn == null) {
                 out.println("conn is null.");
+            } else {
+                // Declare our statement
+                Statement statement = conn.createStatement();
+                String query = "SELECT * from stars limit 10";
 
-            // Declare our statement
-            Statement statement = conn.createStatement();
-            String query = "SELECT * from stars limit 10";
+                // Perform the query
+                ResultSet rs = statement.executeQuery(query);
 
-            // Perform the query
-            ResultSet rs = statement.executeQuery(query);
+                out.println("<TABLE border>");
 
-            out.println("<TABLE border>");
+                // Iterate through each row of rs
+                while (rs.next()) {
+                    String m_id = rs.getString("id");
+                    String m_LN = rs.getString("name");
+                    String m_dob = rs.getString("birthYear");
+                    out.println("<tr>" + "<td>" + m_id + "</td>" + "<td>" + m_LN + "</td>" + "<td>" + m_dob + "</td>"
+                            + "</tr>");
+                }
 
-            // Iterate through each row of rs
-            while (rs.next()) {
-                String m_id = rs.getString("id");
-                String m_LN = rs.getString("name");
-                String m_dob = rs.getString("birthYear");
-                out.println("<tr>" + "<td>" + m_id + "</td>" + "<td>" + m_LN + "</td>" + "<td>" + m_dob + "</td>"
-                        + "</tr>");
+                out.println("</TABLE>");
+
+                rs.close();
+                statement.close();
             }
-
-            out.println("</TABLE>");
-
-            rs.close();
-            statement.close();
         } catch (Exception exception) {
             exception.printStackTrace();
 
