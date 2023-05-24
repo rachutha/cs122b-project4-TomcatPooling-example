@@ -2,32 +2,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.uci.ics</groupId>
-    <artifactId>cs122b-fall21-project5-TomcatPooling-example</artifactId>
+    <artifactId>cs122b-project5-TomcatPooling-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <dependencies>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.23</version>
+            <version>8.0.32</version>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>cs122b-fall21-project5-TomcatPooling-example</finalName>
+        <finalName>cs122b-project5-TomcatPooling-example</finalName>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
                     <source>11</source>
                     <target>11</target>
@@ -35,7 +33,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.0.0</version>
                 <configuration>
                     <warSourceDirectory>WebContent</warSourceDirectory>
                 </configuration>

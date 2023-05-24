@@ -39,18 +39,14 @@ mysql> quit;
 
 ### To run this example:
 
-1. Clone this repository
-   using `git clone https://github.com/UCI-Chenli-teaching/cs122b-fall21-project5-TomcatPooling-example.git`
-2. Open IntelliJ -> Import Project -> Choose the project you just cloned (The root path must contain the pom.xml!) ->
-   Choose Import project from external model -> choose Maven -> Click on Finish -> The IntelliJ will load automatically
-3. For "Root Directory", right click "cs122b-fall21-project5-TomcatPooling-example" -> Mark Directory as -> sources
-   root
-4. In `WebContent/META-INF/context.xml`, make sure the mysql username is `mytestuser` and password is `My6$Password`.
-5. Also make sure you have the `moviedbexample` database.
-6. Add Tomcat local server Run/Debug Configuration.
-7. Change the application context to `/cs122b-fall21-project5-TomcatPooling-example` at Edit Run/Debug Configurations
+1. Open IntelliJ -> Import Project -> Choose the project you just cloned (The root path must contain the pom.xml!) ->
+   Choose Import project from external model -> Click on Finish -> The IntelliJ will load automatically
+2. In `WebContent/META-INF/context.xml`, make sure the mysql username is `mytestuser` and password is `My6$Password`.
+3. Also make sure you have the `moviedbexample` database.
+4. Add Tomcat local server Run/Debug Configuration.
+5. Change the application context to `/cs122b-project5-TomcatPooling-example` at Edit Run/Debug Configurations
    for Tomcat -> Deployment.
-8. Navigate to http://localhost:8080/cs122b-fall21-project5-TomcatPooling-example to see a list of stars.
+6. Navigate to http://localhost:8080/cs122b-project5-TomcatPooling-example to see a list of stars.
 
 ### Brief Explanation
 
@@ -65,7 +61,7 @@ mysql> quit;
   maxTotal="100" maxIdle="30" maxWaitMillis="10000"
   ```
   You would have to redeploy after changing this file. Otherwise, the Tomcat server may still use the
-  previous context.xml. Check [this](http://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html) for more information about how to configure Connection Pooling.
+  previous context.xml. Check [this](http://tomcat.apache.org/tomcat-10.0-doc/jndi-datasource-examples-howto.html) for more information about how to configure Connection Pooling.
 
 - Look at the following files for the main changes in this war file compared to the previous war file without Connection
   Pooling:

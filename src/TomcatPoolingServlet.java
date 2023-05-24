@@ -1,13 +1,10 @@
-
-/* A servlet to display the contents of the MySQL movieDB database */
-
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.servlet.ServletConfig;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,12 +14,8 @@ import java.sql.Statement;
 
 @WebServlet(name = "TomcatPoolingServlet", urlPatterns = "/")
 public class TomcatPoolingServlet extends HttpServlet {
-
-    private static final long serialVersionUID = 2L;
-
     // Create a dataSource which registered in web.xml
     private DataSource dataSource;
-
     public void init(ServletConfig config) {
         try {
             dataSource = (DataSource) new InitialContext().lookup("java:comp/env/jdbc/moviedbexample");
