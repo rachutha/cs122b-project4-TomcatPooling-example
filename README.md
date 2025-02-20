@@ -1,4 +1,4 @@
-## CS 122B Project 5 Tomcat Pooling example
+## CS 122B Project 4 Tomcat Pooling example
 
 This example shows how to use Connection Pooling with JDBC.
 
@@ -44,9 +44,9 @@ mysql> quit;
 2. In `WebContent/META-INF/context.xml`, make sure the mysql username is `mytestuser` and password is `My6$Password`.
 3. Also make sure you have the `moviedbexample` database.
 4. Add Tomcat local server Run/Debug Configuration.
-5. Change the application context to `/cs122b-project5-TomcatPooling-example` at Edit Run/Debug Configurations
+5. Change the application context to `/cs122b-project4-TomcatPooling-example` at Edit Run/Debug Configurations
    for Tomcat -> Deployment.
-6. Navigate to http://localhost:8080/cs122b-project5-TomcatPooling-example to see a list of stars.
+6. Navigate to http://localhost:8080/cs122b-project4-TomcatPooling-example to see a list of stars.
 
 ### Brief Explanation
 
