@@ -12,7 +12,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-@WebServlet(name = "TomcatPoolingServlet", urlPatterns = "/test")
+@WebServlet(name = "TomcatPoolingServlet", urlPatterns = "/")
 public class TomcatPoolingServlet extends HttpServlet {
     // Create a dataSource which registered in web.xml
     private DataSource dataSource;
